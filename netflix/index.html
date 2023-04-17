@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         padding: 0px;
+         margin: 0px;
+      }
+
+      header {
+         position: relative;
+         padding: 8px 34px;
+         z-index: 10;
+
+      }
+
+      .logo {
+         background-image: url(images/download-removebg-preview.png);
+         height: 73px;
+         width: 175px;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+         display: inline-block;
+      }
+
+      .language {
+         background: transparent;
+         border-radius: 3px;
+         position: absolute;
+         top: 28px;
+         border: 1px solid white;
+         color: white;
+         right: 173px;
+         padding: 6px 10px;
+         height: 35px;
+         width: 102px;
+         font-size: 17px;
+      }
+
+      option {
+         color: black;
+         background-color: rgba(58, 57, 57, 0.226);
+      }
+
+      nav {
+         display: inline-block;
+         position: absolute;
+         top: 28px;
+         right: 60px;
+         display: inline-block
+      }
+
+      nav button {
+         background-color: red;
+         color: white;
+         padding: 7px 17px;
+         border: none;
+         border-radius: 3px;
+         font-size: 16px;
+         font-weight: 400px;
+      }
+
+      .image {
+         /* height: 1025px; */
+         background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.712)), url(https://assets.nflxext.com/ffe/siteui/vlv3/afc06103-4d6a-4236-b496-34b671a7e9ba/383fc36a-aa04-4dfd-95a0-a4b71bc21eed/IN-en-20221003-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+         background-size: cover;
+         height: 700px;
+
+         background-repeat: no-repeat;
+         position: relative;
+         top: -100px;
+      }
+
+      .content {
+         text-align: center;
+         position: absolute;
+         left: 350px;
+         top: 240px;
+         width: 640px;
+      }
+
+      .content h1 {
+         font-family: Arial, Helvetica, sans-serif;
+         color: white;
+         font-size: 50px;
+         font-weight: bold;
+      }
+
+      .content h2 {
+         color: white;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 27px;
+         padding: 10px 0px;
+         font-weight: 200;
+      }
+
+      .content p {
+         color: white;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 20px;
+         padding: 0px 10px;
+         width: 670px;
+      }
+
+      .content form :nth-child(1) {
+         width: 450px;
+         height: 60px;
+         padding: 0px 10px;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 18px;
+
+      }
+
+      .content form :last-child {
+         height: 60px;
+         background-color: red;
+         padding: 0px 20px;
+         color: white;
+         width: 170px;
+         font-size: 19px;
+         border: none;
+         font-weight: 400;
+      }
+
+      .content form :last-child:hover {
+         background-color: rgba(255, 0, 0, 0.815);
+      }
+
+
+      .story {
+         background-color: black;
+         height: 550px;
+         color: white;
+         margin: 0px;
+         padding: 30px 45px;
+         display: inline-block;
+         width: 1350px;
+         position: relative;
+         top: -100px;
+        border-top: 7px solid rgb(73, 72, 72);
+        border-bottom: 7px solid rgb(85, 85, 85);
+      }
+      .animation{
+         position: absolute;
+         top: -30px;
+      }
+
+      .img {
+         position: relative;
+         top: 50px;
+         z-index: 2;
+         left: 600px;
+         display: inline-block;
+         border: none;
+         width: 640px;
+         height: 400px;
+      }
+
+      .video {
+         position: relative;
+         top: -70px;
+         right: -40px;
+         display: inline-block;
+         width: 470px;
+         height: 270px;
+      }
+      .about{
+         text-align: left;
+         position: relative;
+         display: inline-block;
+         top: 130px;
+      }
+      .about h1{
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 50px;
+         font-weight: 500px;
+         padding: 10px 0px;
+        display: inline-block;
+      }
+      .about h2{
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 20px;
+         padding: 0px 0px;
+         font-weight: 300;
+      }
+      .download{
+         background-color: black;
+         height: 550px;
+         color: white;
+         margin: 0px;
+         padding: 30px 45px;
+         display: inline-block;
+         width: 1350px;
+         position: relative;
+         top: -100px;
+         border-bottom: 8px solid rgb(56, 56, 56);
+        
+      }
+      .text {
+         text-align: left;
+         position: absolute;
+         display: inline-block;
+         top: 160px;
+         left: 670px;
+      }
+      .text h1{
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 48px;
+         font-weight: 500px;
+         padding: 10px 0px;
+        display: inline-block;
+      }
+      .text h3{
+        font-family: Arial, Helvetica, sans-serif;
+         font-size: 28px;
+         padding: 0px 0px;
+         font-weight: 500;
+      }
+      .mobanimation{
+         position: absolute;
+         top: -30px;
+         height: 600px;
+         width: 500px;
+      }
+      .imgad{
+         position: relative;
+         z-index: 2;
+         top: 88px;
+         left: 5px;
+         display: inline-block;
+         border: none;
+         height: 380px;
+         width: 505px;
+      }
+      .mobimage{
+         height: 90px;
+         background-color: black;
+         width: 317px;
+         border: 1px solid gray;
+        border-radius: 12px;
+         position: absolute;
+         z-index: 5;
+         top: 350px;
+         left: 95px;
+         padding: 7px 15px;
+      }
+      .imag1{
+         height: 70px;
+      }
+      .a{
+        position: absolute;
+        z-index: 6;
+        left: 80px;
+        top: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .a1{
+         font-weight: 700;
+
+      }
+      .a2{
+         font-weight: 400;
+         color:#0071eb;
+      }
+      .anim{
+         height: 60px;
+         width: 48px;
+         
+         position: absolute;
+         left: 250px;
+         top: 16px;
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-image: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif);
+      }
+      .storyapple{
+         background-color: black;
+         height: 550px;
+         color: white;
+         margin: 0px;
+         padding: 30px 45px;
+         display: inline-block;
+         width: 1350px;
+         position: relative;
+         top: -104px;
+         border-bottom: 9px solid rgb(68, 67, 67);
+      }
+      .appleimg{
+         position: relative;
+          top: 30px;
+         z-index: 2;
+         left: 200px;
+         display: inline-block;
+         border: none;
+         width: 640px;
+         height: 400px;
+      }
+      .apimg{
+         width: 555px;
+         height: 416px;
+      }
+      .apvid{
+         position: relative;
+         width: 400px;
+         display: inline-block;
+         border: none;
+         position: relative;
+         top: -345px;
+         left: 750px;
+         height: 200px;
+      }
+      .applestory{
+         text-align: left;
+         position: relative;
+         display: inline-block;
+         left: 90px;
+         top: -100px;
+      }
+    .applestory h1{
+      font-family: Arial, Helvetica, sans-serif;
+         font-size: 48px;
+         font-weight: 500px;
+         padding: 10px 0px;
+        display: inline-block;
+        margin-bottom: 10px;
+     }
+     .applestory h3{
+      font-family: Arial, Helvetica, sans-serif;
+         font-size: 25px;
+         padding: 0px 0px;
+         font-weight: 500;
+     }
+     .children{
+      background-color: black;
+         height: 550px;
+         color: white;
+         margin: 0px;
+         padding: 30px 45px;
+         display: inline-block;
+         width: 1350px;
+         position: relative;
+         top: -209px;
+         border-bottom: 9px solid rgb(68, 67, 67);
+     }
+     .cilstory{
+      text-align: left;
+         position: absolute;
+         display: inline-block;
+         top: 160px;
+         left: 670px;
+     }
+     .chilimg{
+      position: relative;
+          top: 43px;
+          left: -415px;
+         z-index: 2;
+         display: inline-block;
+         border: none;
+        
+     }
+     .chimg{
+         width: 505px;
+         height: 378px;
+     }
+     .chilstory{
+      text-align: left;
+         position: relative;
+         display: inline-block;
+         left: 650px;
+         top: -60px;
+     }
+     .chilstory h1{
+      font-family: Arial, Helvetica, sans-serif;
+         font-size: 48px;
+         font-weight: 500px;
+         padding: 10px 0px;
+        display: inline-block;
+        margin-bottom: 10px;
+     }
+     .chilstory h3{
+      font-family: Arial, Helvetica, sans-serif;
+         font-size: 25px;
+         padding: 0px 0px;
+         font-weight: 500;
+     }
+   </style>
+</head>
+
+<body>
+   <header>
+      <div class="logo"></div>
+      <select name="language" class="language">
+         <option value="english">English</opstion>
+         <option value="hindi">हिन्दी </opstion>
+      </select>
+      <nav>
+         <button class="sign">Sign In</button>
+      </nav>
+   </header>
+   <section class="image">
+      <section class="content">
+         <h1>Unlimited movies, TV <br> shows and more.</h1>
+         <h2> Watch anywhere. Cancel anytime.</h2>
+         <p> Ready to watch? Enter your email to create or restart your membership.</p><br>
+         <form action="">
+            <input type="search" placeholder="Email address">
+            <input type="submit" value="Get Started >">
+         </form>
+      </section>
+   </section>
+   <div class=" story">
+      <div class="about">
+         <h1>
+            Enjoy on your TV.
+         </h1>
+         <h2>
+            Watch on smart TVs, PlayStation, Xbox,<br> Chromecast, Apple TV, Blu-ray players and <br> more.
+         </h2>
+      </div>
+      <div class="animation">
+         <div class="img">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
+         </div>
+         <div class="video">
+            <video autoplay muted loop>
+               <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v">
+            </video>
+         </div>
+      </div>
+   </div>
+   <div class="download">
+      <div class="text">
+         <h1>
+            Download your shows <br> to watch offline.
+         </h1>
+         <h3>
+            Save your favourites easily and always have <br> something to watch.
+         </h3>
+      </div>
+      <div class="mobanimation">
+         <div class="mobimg">
+            <img class="imgad" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="">
+         </div>
+         <div class="mobimage">
+               <div class="imag">
+                  <img class="imag1" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="">
+               </div>
+               <div class="a">
+                  <div class="a1">Stranger Things</div>
+                  <div class="a2">Downloading...</div>
+               </div>
+               <div class="anim"></div>
+         </div>
+      </div>
+   </div>
+   <div class="storyapple">
+      <div class="applestory">
+         <h1>Watch everywhere.</h1>
+         <h3>Stream unlimited movies and TV shows on <br> your phone, tablet, laptop, and TV.</h3>
+      </div>
+      <div class="appleimg">
+         <img class="apimg" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" alt="">
+      </div>
+      <div class="applevid">
+         <video class="apvid" loop autoplay muted>
+            <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v">
+         </video>
+      </div>
+   </div>
+   <div class="children">
+      <div class="chilstory">
+         <h1>Create profiles for <br> children.</h1>
+         <h3>Send children on adventures with their <br> favourite characters in a space made just for <br> them—free with your membership.</h3>
+      </div>
+      <div class="chilimg">
+         <img class="chimg" src="https://occ-0-2085-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420" alt="">
+      </div>
+   </div>
+   
+</body>
+
+</html>
